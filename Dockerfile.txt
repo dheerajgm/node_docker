@@ -1,0 +1,9 @@
+from node
+RUN npm install -y express --save
+RUN npm install -y body-parser --save
+ADD node.js /node/node.js
+ADD datajson.json /node/datajson.json
+WORKDIR /node
+EXPOSE 9000
+CMD [ "node", "node.js" ]
+CMD [ "data", "datajson.json"]
